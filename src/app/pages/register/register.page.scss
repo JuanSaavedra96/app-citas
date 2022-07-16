@@ -1,5 +1,5 @@
     .registroDeUsuarioTitulo{
-      color:#ffffff;
+      color:grey;
       text-align: left;
       width:85%;
       margin-left:10%;
@@ -10,11 +10,13 @@
     ion-content{
       --background: white!important; 
     }
-  /*   ion-item {
-      --background: transparent!important;
-    } */
+     ion-item {
+      border: 1px solid grey;
+      border-radius: 5%;
+    } 
     ion-input{
-      background:#fff;
+      //background:#fff;
+      color:grey;
       height: 50px;
       /*     border-radius:10px;*/
       border-bottom:none!important; 
@@ -22,8 +24,8 @@
     .contenedorTextoInicial{
       background-size: cover;
       background-repeat: no-repeat;
-      height: 90px;
-      color:#fff;
+      height: 50px;
+      color:#000;
      /*  border-bottom-left-radius: 15px; */
       border-bottom-right-radius: 45px;
     }
@@ -31,13 +33,13 @@
       font-size:.8em;
     }
     .formulario{
-      margin-top:20px!important;
+      margin-top:10px!important;
       padding:15px;
     }
     .alto50{
       height: 50px;
       margin-top:15px;
-      --background:#061175;
+      --background:#3880ff;
       color:#fff;
       width:90%;
       margin-left: 5%;
@@ -116,4 +118,35 @@
     --background:#061175;
     color:#fff;
 
+  }
+  ion-header{
+    //--background: #fff;
+    //--color:#fff;    
+    border:solid 1px grey;
+    ion-toolbar{
+      --background: #fff;
+    //--color:#fff;  
+      //background-color: #fff;
+      ion-buttons{
+        color: grey;
+        //background-color: #fff;
+        //text-align: left;
+      }
+      ion-title{
+        color:grey;
+        font-size: 15px;
+      }
+    }
+  }
+  ion-label{
+    color:grey!important;
+    //background-color: grey;
+  }
+  ion-datetime{
+    background-color: #fff;
+    color: grey;
+  }
+  ion-checkbox{
+    --background:#FFF;
+    border: solid 1px grey;
   }

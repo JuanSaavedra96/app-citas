@@ -133,9 +133,7 @@
       color:rgb(44, 186, 252);
       //--border-color: rgb(44, 186, 252);
     }
-    .contenedorCabecera {
-        color: #061175;
-    }
+    
     .alert-wrapper {
         border-top-right-radius: 40px!important;
         --background: #00b6a3!important;
@@ -154,3 +152,14 @@
   :host(.item-interactive.ion-invalid){
     --highlight-background: transparent!important;
   }
+
+  .circulo {
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #5cb85c;
+    margin-left: 35%;
+    margin-top: 10%;
+}
