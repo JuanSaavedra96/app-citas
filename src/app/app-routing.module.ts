@@ -27,6 +27,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterPageModule)
   },
   {
+    path: 'recovery',
+    loadChildren: () => import('./pages/recovery/recovery.module').then(m => m.RecoveryPageModule)
+  },
+  {
+    path: 'recovery/:data',
+    loadChildren: () => import('./pages/recovery/recovery.module').then(m => m.RecoveryPageModule)
+  },
+  {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },

@@ -6,30 +6,23 @@
             <ion-grid>
               <ion-row>
                 <ion-col size="6">
-                  <ion-label position="stacked">Tipo de documento</ion-label>
-                  <ion-item color="tint" nolines>
+                  <ion-item no-lines color="tint" >
                       <ion-select name="typeDocument"  placeholder="Tipo de documento">
                         <ion-select-option>DNI</ion-select-option>
                       </ion-select>
                   </ion-item>
                 </ion-col>
                 <ion-col size="6">
-                  <ion-label position="floating">N° de documento</ion-label>
-                  <ion-item color="tint" nolines>
-                      <ion-input type="text"
-                                 required
-                                 name="dni"
-                                 placeholder="DNI">
+                  <ion-item color="tint" no-lines>
+                    <ion-label position="floating">N° de documento</ion-label>
+                      <ion-input type="text" required name="dni">
                       </ion-input>
                 </ion-item>
               </ion-col>
               <ion-col size="12">
-                <ion-label position="floating">Contraseña</ion-label>
-                <ion-item color="tint">
-                    <ion-input type="password"
-                                nolines
-                               name="password"
-                               placeholder="Password">
+                <ion-item no-lines color="tint">
+                  <ion-label position="floating">Contraseña</ion-label>
+                    <ion-input type="password"  name="password" >
                     </ion-input>
                 </ion-item>
               </ion-col>
@@ -39,6 +32,6 @@
           <ion-button color="primary" (click)="startSesion()" block class="inicioSesion">LOGIN</ion-button>
           <ion-button class="register" (click)="registrarUsuario()">REGISTRAR</ion-button>
       </div>
-          <p class="textoOlvido">Recuperar contraseña </p>
+          <p (click)="goToRecovery()" class="textoOlvido">Recuperar contraseña </p>
   </ion-content>
   

@@ -1,0 +1,102 @@
+ion-header{
+  border:solid 1px grey;
+  ion-toolbar{
+    --background: rgb(44, 186, 252);
+    ion-buttons{
+      color: #fff;
+    }
+    ion-title{
+      color:#fff;
+      font-size: 15px;
+    }
+  }
+}
+ion-content{
+  --background: white!important; 
+}
+ion-title{
+  color:grey;
+}
+.codigoValida{
+      color: #96999C;
+      text-align: center;
+      // margin-bottom: 2em;
+      font-size: 1em;
+      font-weight: 300;
+      padding-top: 1em;
+      width: 90%;
+      margin-left: 5%;
+    }
+    .rectanguloInput{
+      border: 2px solid #96999C;
+      height: 40px;
+      width: 40px!important;
+      margin:2px;
+      border-radius:5px;
+    }
+    .center{
+      text-align:center;
+      margin-top:20px;
+    }
+    .codigoreen{
+      color:#062F51;
+      font-size:1em;
+      text-transform: lowercase;
+      font-size:1.2em;
+      font-weight:lighter;
+      border:1px solid #062F51;
+      border-radius:10px;
+    }
+    .botonRecuperar{
+      background:#00B6A3;
+      width:100%;
+    }
+    .newCode{
+      color:#062F51;
+      font-size:.9em;
+      width:90%;
+      margin-left: 5%;
+      margin-top:20px;
+    }
+    .tituloContraseña{
+      width:90%;
+      margin-left: 5%;
+      color:#062F51;
+      text-align: center;
+      font-size:1.1em;
+      margin-bottom:0!important;
+      margin-top:20px;
+    }
+    .text-input-md{
+      font-size: 2em;
+      color: #00B6A3;
+      text-align: center;
+      font-weight: 600;
+    }
+    .padding{
+        width:80%;
+        margin-left:10%;
+    }
+    .recuerda{
+        width:90%;
+        margin-left: 5%;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .containerInputs{
+        width:90%;
+        margin-left: 5%;
+    }
+.titulo{
+  color: rgb(44, 186, 252);
+  font-weight: bold;
+}
+ion-input{
+  color: grey!important;
+}
+ion-label{
+  color: grey!important;
+}
+ion-item{
+  --background:white;
+}

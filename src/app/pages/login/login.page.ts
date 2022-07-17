@@ -53,4 +53,40 @@ export class LoginPage implements OnInit {
   goToHome(){
     this.router.navigate(['home']);
   }
+
+  async goToRecovery(){
+    const alert = await this.alertCtrl.create({
+      header:"RECUPERAR CONTRASEÑA",
+      message:'Ingresa tu correo electronico y te enviaremos un código para recuperar tu cuenta',
+      inputs :[
+        {
+          name:'Email',
+          placeholder:'Ingresa tu correo electrónico',
+          type: 'text'
+        }
+      ],
+      buttons :[
+          {
+            text:'Enviar',
+            handler: data => {
+              console.log('enviando correo electronico');
+              let document = data.documento;
+              console.log('lo que se almacena en correo:', data);
+             /*  const dataSend = {
+                documentNumber:  data.documento,
+                documentType: {
+                  id:"1",
+                  name:"D.N.I"
+                },
+                //app: 'ebooking'
+              } */
+              //SERVICIO DE ENVIO Y SI SE CONFIRMA TE REDIRECCIONA 
+              this.router.navigate(['recovery']);
+              console.log("disque enviando correo")
+            }
+          }
+      ]
+    });
+   await alert.present(); 
+  }
 }
