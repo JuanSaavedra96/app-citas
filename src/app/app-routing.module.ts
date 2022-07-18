@@ -35,7 +35,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/recovery/recovery.module').then(m => m.RecoveryPageModule)
   },
   {
-    path: 'folder/:id',
+    path: 'home/:id',
+    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'home',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   

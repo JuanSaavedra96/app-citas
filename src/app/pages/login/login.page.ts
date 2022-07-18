@@ -42,6 +42,7 @@ export class LoginPage implements OnInit {
   /* 
   FUNCIÓN PARA LOGIN */
   startSesion(){
+    this.router.navigate(['home']);
   }
 
   /* 
