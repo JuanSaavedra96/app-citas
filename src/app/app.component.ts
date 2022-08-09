@@ -25,6 +25,16 @@ export class AppComponent {
         url   : "/home",
         icon  : "home"
       },
+      {
+        title : "Mis Citas",
+        url   : "/home",
+        icon  : "home"
+      },
+      {
+        title : "Resultados de Laboratorio",
+        url   : "/home",
+        icon  : "home"
+      },
     ];
   }
 }
