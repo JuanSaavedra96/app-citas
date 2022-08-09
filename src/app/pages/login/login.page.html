@@ -1,26 +1,27 @@
 <ion-content>
   <div class="circulo">
   </div> 
+  <br><br><br><br><br><br><br><br><br><br>
       <div class="containerInputs">
           <form #formulario="ngForm">
             <ion-grid>
               <ion-row>
                 <ion-col size="6">
-                  <ion-item no-lines color="tint" >
+                  <ion-item no-lines  >
                       <ion-select name="typeDocument"  placeholder="Tipo de documento">
                         <ion-select-option>DNI</ion-select-option>
                       </ion-select>
                   </ion-item>
                 </ion-col>
                 <ion-col size="6">
-                  <ion-item color="tint" no-lines>
+                  <ion-item  no-lines>
                     <ion-label position="floating">N° de documento</ion-label>
                       <ion-input type="text" required name="dni">
                       </ion-input>
                 </ion-item>
               </ion-col>
               <ion-col size="12">
-                <ion-item no-lines color="tint">
+                <ion-item no-lines  >
                   <ion-label position="floating">Contraseña</ion-label>
                     <ion-input type="password"  name="password" >
                     </ion-input>
@@ -29,7 +30,8 @@
             </ion-row>
             </ion-grid>
           </form>
-          <ion-button color="primary" (click)="startSesion()" block class="inicioSesion">LOGIN</ion-button>
+          <ion-button  (click)="startSesion()" block class="inicioSesion">LOGIN</ion-button>
+          <br><br><br><br>
           <ion-button class="register" (click)="registrarUsuario()">REGISTRAR</ion-button>
       </div>
           <p (click)="goToRecovery()" class="textoOlvido">Recuperar contraseña </p>

@@ -3,7 +3,7 @@
         padding:18px;
     }
     ion-content{
-        --background: white!important; 
+        --background: #0392ce!important; 
       }
     ion-input {
         /* --background:rgba(255,255,255,0.6);  */
@@ -39,6 +39,7 @@
         border-top-right-radius: 15px;
         width:90%;
         margin-left:5%;
+        --background: #135a97!important;
     }
     ion-label{
         color: grey!important;
@@ -46,10 +47,10 @@
         //color:#fff;
     }
     .textoOlvido{
-      color:#92949c;
+      color:#fff;
       text-align: center;
       margin-bottom: 20px;
-    
+      font-weight: bold;
       padding-top: .5em;
       padding-bottom: .5em;
       border-radius: 10px;
@@ -68,11 +69,11 @@
       width: 90%;
       margin-left:5%;	
       text-align: right;
-      border: solid 2px rgb(44, 186, 252);
+      border: solid 2px #fff;
       border-radius:5px;
-      --background:#fff;
+      --background:#0392ce;
       height: 50px;
-      color:rgb(44, 186, 252);
+      color:#fff;
       //--border-color: rgb(44, 186, 252);
     }
     
