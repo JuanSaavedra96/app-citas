@@ -7,11 +7,38 @@ ion-menu-button {
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 30%;
+  ion-note{
+    color: rgb(165, 165, 165);
+    font-weight: bold;
+  }
+  ion-item{
+    text-align: center;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 3%;
+    color: #fff;
+    //height: 100px!important;
+  }
+  .iconPrincipal{
+    font-size: 60px;
+  }
+  .reservarCita{
+    text-align:left;
+    ion-label{
+      color: blue;
+      margin-top: 12%;
+      margin-bottom : 12%;
+      font-weight: bold;
+    }
+    ion-icon{
+      color: blue;
+    }
+  }
+  //transform: translateY(-50%);
 }
 
-#container strong {
+/* #container strong {
   font-size: 20px;
   line-height: 26px;
 }
@@ -25,4 +52,4 @@ ion-menu-button {
 
 #container a {
   text-decoration: none;
-}
+} */

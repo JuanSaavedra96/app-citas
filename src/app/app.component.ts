@@ -35,6 +35,26 @@ export class AppComponent {
         url   : "/home",
         icon  : "home"
       },
+      {
+        title : "Mis Recetas",
+        url   : "/home",
+        icon  : "home"
+      },
+      {
+        title : "Mis Familiares",
+        url   : "/home",
+        icon  : "home"
+      },
+      {
+        title : "Beneficios",
+        url   : "/home",
+        icon  : "home"
+      },
+      {
+        title : "Cerrar Sesion",
+        url   : "/login",
+        icon  : "home"
+      },
     ];
   }
 }

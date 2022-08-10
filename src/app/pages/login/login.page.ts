@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, AlertController, LoadingController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { EndpointService } from 'src/app/services/endpoint.service';
 
 @Component({
   selector: 'app-login',
@@ -23,11 +24,13 @@ export class LoginPage implements OnInit {
   public dni: string ;
   public typeDocument ;
   public documentId ;
+  public mostrar_ocultar:boolean=false;
   constructor(
     public alertCtrl: AlertController,
     public modalCtrl: ModalController,
     public loading: LoadingController,
-    public router: Router) { 
+    public router: Router,
+    public newsSrv:EndpointService) { 
      
         
     }
@@ -41,6 +44,30 @@ export class LoginPage implements OnInit {
   
   /* 
   FUNCIÓN PARA LOGIN */
+  startSesion1(){
+    //this.router.navigate(['home']);
+    this.newsSrv.newLoginWithDni(this.dni).subscribe((data:any) => {
+      console.log('data:', data);
+      /* this.msg = "";
+      localStorage.setItem('authorization', JSON.stringify(data));
+      localStorage.setItem('name', data.name);
+      localStorage.setItem('visto', 'ok');
+      this.router.navigate(['home']);
+      this.documentId = null;
+      this.dni = "";
+      this.password = ""; */
+    }, async err =>{
+      console.log(err);
+      this.msg = err.error.message;
+      const alert = await this.alertCtrl.create({
+        header: 'Error de Login',
+        message: `${this.msg}`,
+        buttons: ['Volver a intentar']
+      });
+      await alert.present();
+    });
+  }
+
   startSesion(){
     this.router.navigate(['home']);
   }
@@ -90,4 +117,15 @@ export class LoginPage implements OnInit {
     });
    await alert.present(); 
   }
+
+  mostrarContrasena(){
+    var tipo = document.getElementById("password") as HTMLInputElement | null;;
+    if(tipo.type == "password"){
+        tipo.type = "text";
+        this.mostrar_ocultar=true;
+    }else{
+        tipo.type = "password";
+        this.mostrar_ocultar=false;
+    }
+}
 }

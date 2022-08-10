@@ -6,25 +6,31 @@
           <form #formulario="ngForm">
             <ion-grid>
               <ion-row>
-                <ion-col size="6">
+                <!-- <ion-col size="6">
                   <ion-item no-lines  >
                       <ion-select name="typeDocument"  placeholder="Tipo de documento">
                         <ion-select-option>DNI</ion-select-option>
                       </ion-select>
                   </ion-item>
-                </ion-col>
-                <ion-col size="6">
+                </ion-col> -->
+                <ion-col size="12">
                   <ion-item  no-lines>
-                    <ion-label position="floating">N° de documento</ion-label>
-                      <ion-input type="text" required name="dni">
+                    <ion-label position="floating">Email</ion-label>
+                      <ion-input type="text" required name="email" [(ngModel)]="dni">
                       </ion-input>
                 </ion-item>
               </ion-col>
               <ion-col size="12">
                 <ion-item no-lines  >
                   <ion-label position="floating">Contraseña</ion-label>
-                    <ion-input type="password"  name="password" >
+                    <ion-input type="password"  name="password" id="password" >
                     </ion-input>
+                    <ion-button class="eyePass" fill="clear" (click)="mostrarContrasena()">
+                      <ion-icon *ngIf="mostrar_ocultar==false" slot="icon-only" name="eye-outline" ></ion-icon>
+                      <ion-icon *ngIf="mostrar_ocultar==true" slot="icon-only" name="eye-off-outline" ></ion-icon>
+                    </ion-button>
+                      <!-- <button class="btn" type="button"><ion-icon class="eyePass" name="eye-outline" (click)="mostrarContrasena()"></ion-icon> </button>
+                     -->
                 </ion-item>
               </ion-col>
             </ion-row>
