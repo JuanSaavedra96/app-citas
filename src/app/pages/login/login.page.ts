@@ -44,7 +44,7 @@ export class LoginPage implements OnInit {
   
   /* 
   FUNCIÓN PARA LOGIN */
-  startSesion1(){
+  startSesion(){
     //this.router.navigate(['home']);
     this.newsSrv.newLoginWithDni(this.dni).subscribe((data:any) => {
       console.log('data:', data);
@@ -68,7 +68,7 @@ export class LoginPage implements OnInit {
     });
   }
 
-  startSesion(){
+  startSesion1(){
     this.router.navigate(['home']);
   }
 
@@ -127,5 +127,5 @@ export class LoginPage implements OnInit {
         tipo.type = "password";
         this.mostrar_ocultar=false;
     }
-}
+  }
 }

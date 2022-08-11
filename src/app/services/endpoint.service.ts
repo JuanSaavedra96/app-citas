@@ -14,10 +14,10 @@ export class EndpointService {
 
   newLoginWithDni(documentNumber: string){
     const authorization = JSON.parse(localStorage.getItem('authorization'));
-    let headers = new HttpHeaders({"Authorization": authorization.authorization});
+    //let headers = new HttpHeaders({"Authorization": authorization.authorization});
     //const app = "ebooking"
     //let params = {documentNumber};
-    let params = {documentNumber};
+    let params = {usuario:documentNumber};
      return this.http.post(this.newLogin, params).pipe(
        map(resp => {
          return resp
