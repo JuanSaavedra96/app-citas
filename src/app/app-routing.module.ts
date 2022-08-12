@@ -35,9 +35,33 @@ const routes: Routes = [
     loadChildren: () => import('./pages/recovery/recovery.module').then(m => m.RecoveryPageModule)
   },
   {
+    path: 'laboratorio',
+    loadChildren: () => import('./pages/laboratorio/laboratorio.module').then(m => m.LaboratorioModule)
+  },
+  {
+    path: 'recetas',
+    loadChildren: () => import('./pages/recetas/recetas.module').then(m => m.RecetasModule)
+  },
+  {
+    path: 'reservar-cita',
+    loadChildren: () => import('./pages/reservar-cita/reservar-cita.module').then(m => m.ReservarCitaModule)
+  },
+  {
+    path: 'beneficios',
+    loadChildren: () => import('./pages/beneficios/beneficios.module').then(m => m.BeneficiosModule)
+  },
+  {
+    path: 'dependientes',
+    loadChildren: () => import('./pages/dependientes/dependientes.module').then(m => m.DependientesModule)
+  },
+  {
+    path: 'citas-medicas',
+    loadChildren: () => import('./pages/citas-medicas/citas-medicas.module').then(m => m.CitasMedicasModule)
+  },
+  /* {
     path: 'home/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  },
+  }, */
   {
     path: 'home',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)

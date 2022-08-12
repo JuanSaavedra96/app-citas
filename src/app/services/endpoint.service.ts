@@ -8,8 +8,8 @@ import { map } from 'rxjs/operators';
 })
 export class EndpointService {
   private SERVER = API_ENDPOINT;
-  //private newLogin = this.SERVER + '/api/Items/login';
-  private newLogin = this.SERVER + '/erp/cita/login';
+  private newLogin = this.SERVER + '/api/items/login';
+  //private newLogin = this.SERVER + '/erp/cita/user/login';
   constructor(public http: HttpClient) { }
 
   newLoginWithDni(documentNumber: string){
@@ -17,7 +17,7 @@ export class EndpointService {
     //let headers = new HttpHeaders({"Authorization": authorization.authorization});
     //const app = "ebooking"
     //let params = {documentNumber};
-    let params = {usuario:documentNumber};
+    let params = {'usuario':documentNumber};
      return this.http.post(this.newLogin, params).pipe(
        map(resp => {
          return resp
