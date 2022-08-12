@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-reservar-cita',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReservarCitaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _location: Location) { }
 
   ngOnInit() {}
-
+  regresar(){
+    this._location.back();
+  }
 }

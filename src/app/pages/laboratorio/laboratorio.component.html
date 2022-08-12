@@ -1,3 +1,68 @@
-<p>
-  laboratorio works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="regresar()">
+      <ion-icon size="large" name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Mis Resultados de Laboratorio</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-item class="contenedor">
+      <div class="fecha">
+        <ion-note>03</ion-note>
+        <ion-label>MAYO</ion-label>
+      </div>
+      &nbsp;&nbsp;
+      <div class="esp">
+        <ion-note>Especialista:</ion-note><br>
+        <ion-label>JUAN LUIS SAAVEDRA DELGADO</ion-label>
+        <ion-note>Especialidad:</ion-note><br>
+        <ion-label>Cardiología</ion-label>
+      </div>
+    </ion-item>
+    <ion-item class="list">
+      <ion-label >CREATININA</ion-label>
+        <ion-note  slot="end"> 01</ion-note>
+    </ion-item>
+    <ion-item class="list">
+      <ion-label >ELECTROLITOS</ion-label>
+        <ion-note  slot="end"> 02</ion-note>
+    </ion-item>
+    <ion-item class="list">
+      <ion-label >GLUCOSA</ion-label>
+        <ion-note  slot="end"> 03</ion-note>
+    </ion-item>
+    <br>
+    <div class="informe">
+      <ion-note> Ver informe</ion-note>
+    </div>
+  </ion-card>
+  <ion-card>
+    <ion-item class="contenedor">
+      <div class="fecha">
+        <ion-note>10</ion-note>
+        <ion-label>JUNIO</ion-label>
+      </div>
+      &nbsp;&nbsp;
+      <div class="esp">
+        <ion-note>Especialista:</ion-note><br>
+        <ion-label>JUAN LUIS SAAVEDRA DELGADO</ion-label>
+        <ion-note>Especialidad:</ion-note><br>
+        <ion-label>Cardiología</ion-label>
+      </div>
+    </ion-item>
+    <ion-item class="list">
+      <ion-label >GASES EN SANGRE</ion-label>
+        <ion-note  slot="end"> 01</ion-note>
+    </ion-item>
+    <ion-item class="list">
+      <ion-label >SEROLÓGICAS CUALITATIVAS</ion-label>
+        <ion-note  slot="end"> 02</ion-note>
+    </ion-item>
+    <br>
+    <div class="informe">
+      <ion-note> Ver informe</ion-note>
+    </div>
+  </ion-card>
+</ion-content>

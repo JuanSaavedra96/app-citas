@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BeneficiosRoutingModule } from './beneficios-routing.module';
+import { BeneficiosComponent } from './beneficios.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [BeneficiosComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    BeneficiosRoutingModule
   ]
 })
 export class BeneficiosModule { }

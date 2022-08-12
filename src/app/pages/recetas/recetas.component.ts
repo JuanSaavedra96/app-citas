@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recetas',
@@ -7,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecetasComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _location: Location,
+    public router: Router) { }
 
   ngOnInit() {}
-
+  regresar(){
+    this.router.navigate(['home']);
+  }
 }

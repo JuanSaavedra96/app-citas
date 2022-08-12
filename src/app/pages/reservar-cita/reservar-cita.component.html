@@ -1,3 +1,47 @@
-<p>
-  reservar-cita works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="regresar()">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reservar Cita</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br><br>
+  <ion-row>
+    <ion-col size="12">
+      <ion-item no-lines color="tint">
+        <ion-select  formControlName="documentType" name="documentType" placeholder="Seleccione una Sede" >
+          <ion-select-option >SEDE CLINICA DEL NORTE</ion-select-option>
+          <ion-select-option >SEDE CLINICA DEL CENTRO</ion-select-option>
+          <ion-select-option >SEDE CLINICA DEL NOR OESTE</ion-select-option>
+          <ion-select-option >SEDE CLINICA DEL SUR</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <ion-item no-lines color="tint">
+        <ion-select interface="action-sheet" formControlName="documentType" name="documentType" placeholder="Seleccione una Especialidad">
+          <ion-select-option >ANESTESIOLOGÍA</ion-select-option>
+          <ion-select-option >CARDIOLOGÍA</ion-select-option>
+          <ion-select-option >CIRUGÍA DE CABEZA</ion-select-option>
+          <ion-select-option >DERMATOLOGÍA</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <ion-item no-lines color="tint">
+        <ion-select  formControlName="documentType" name="documentType" placeholder="Seleccione una Fecha" >
+          <ion-select-option >SEDE CLINICA DEL NORTE</ion-select-option>
+          <ion-select-option >SEDE CLINICA DEL CENTRO</ion-select-option>
+          <ion-select-option >SEDE CLINICA DEL NOR OESTE</ion-select-option>
+          <ion-select-option >SEDE CLINICA DEL SUR</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-content>

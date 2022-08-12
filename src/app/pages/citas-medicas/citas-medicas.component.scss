@@ -1,0 +1,31 @@
+ion-content{
+    ion-segment-button{
+        font-weight: bold;
+    }
+    .fecha{
+        ion-note{
+            color: rgb(44, 186, 252);
+            font-weight: bold;
+            font-size: xx-large;
+        }
+        ion-label{
+            color: rgb(44, 186, 252);
+            font-size: small;
+            font-weight: bold;
+        }
+    }
+    div{
+        margin: 1%;
+    }
+    .esp{
+        margin: 1%;
+        ion-note{
+            color: gray;
+            font-size: small;
+        }
+        ion-label{
+            color: gray;
+            font-size: small;
+        }
+    }
+}

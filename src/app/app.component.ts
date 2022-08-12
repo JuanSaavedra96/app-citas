@@ -27,27 +27,27 @@ export class AppComponent {
       },
       {
         title : "Mis Citas",
-        url   : "/home",
+        url   : "/citas-medicas",
         icon  : "home"
       },
       {
         title : "Resultados de Laboratorio",
-        url   : "/home",
+        url   : "/laboratorio",
         icon  : "home"
       },
       {
         title : "Mis Recetas",
-        url   : "/home",
+        url   : "/recetas",
         icon  : "home"
       },
       {
         title : "Mis Familiares",
-        url   : "/home",
+        url   : "/dependientes",
         icon  : "home"
       },
       {
         title : "Beneficios",
-        url   : "/home",
+        url   : "/beneficios",
         icon  : "home"
       },
       {

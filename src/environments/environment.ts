@@ -5,7 +5,7 @@
 export const environment = {
   production: false
 };
-export const API_ENDPOINT = "http://40.112.63.111:8098";
+export const API_ENDPOINT = "http://40.112.63.111:8098/erp/cita";
 
 /*
  * For easier debugging in development mode, you can import the following file

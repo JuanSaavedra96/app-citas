@@ -1,0 +1,54 @@
+ion-content{
+    text-align: right;
+    --background:rgb(240, 240, 240);
+    ion-card{
+        padding: 2%;
+    }
+    ion-card .contenedor{
+        --background:#fff;
+        .fecha{
+            ion-note{
+                color: rgb(44, 186, 252);
+                font-weight: bold;
+                font-size: xx-large;
+            }
+            ion-label{
+                color: rgb(44, 186, 252);
+                font-size: small;
+                font-weight: bold;
+            }
+        }
+        .esp{
+            margin: 1%;
+            ion-note{
+                color: gray;
+                font-weight: bold;
+                font-size: small;
+            }
+            ion-label{
+                color: gray;
+                font-size: small;
+            }
+        }
+    }
+    ion-card .list{
+        margin: 1%;
+        --background:rgb(240, 240, 240);
+        ion-note{
+            color:  gray;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        ion-label{
+            color: rgb(44, 186, 252);
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+    ion-card .informe{
+        font-weight: bold;
+        ion-note{
+            color: black;
+        }
+    }
+}

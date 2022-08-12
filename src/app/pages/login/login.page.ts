@@ -48,14 +48,14 @@ export class LoginPage implements OnInit {
     //this.router.navigate(['home']);
     this.newsSrv.newLoginWithDni(this.dni).subscribe((data:any) => {
       console.log('data:', data);
-      /* this.msg = "";
+       this.msg = "";
       localStorage.setItem('authorization', JSON.stringify(data));
       localStorage.setItem('name', data.name);
       localStorage.setItem('visto', 'ok');
-      this.router.navigate(['home']);
+      /* this.router.navigate(['home']);
       this.documentId = null;
       this.dni = "";
-      this.password = ""; */
+      this.password = ""; */ 
     }, async err =>{
       console.log(err);
       this.msg = err.error.message;

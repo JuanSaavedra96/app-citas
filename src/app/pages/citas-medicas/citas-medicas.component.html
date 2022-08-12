@@ -1,3 +1,66 @@
-<p>
-  citas-medicas works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="regresar()">
+      <ion-icon size="large" name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Mis Citas</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-toolbar>
+    <ion-segment value="proximas" (ionChange)="segmentChanged($event)" scrollable>
+      <ion-segment-button value="proximas">
+        Próximas citas
+      </ion-segment-button>
+      <ion-segment-button value="pasadas">
+        Citas pasadas
+      </ion-segment-button>
+    </ion-segment>
+
+    <div [ngSwitch]="type">
+      <ion-list *ngSwitchCase="'proximas'">
+        <ion-card>
+          <ion-item >
+            <div class="fecha">
+              <ion-note>03</ion-note>
+              <ion-label>MAYO</ion-label>
+            </div>
+            &nbsp;&nbsp;
+            <div class="esp">
+              <ion-label>JUAN LUIS SAAVEDRA DELGADO</ion-label>
+              <ion-note>Especialidad: Cardiología</ion-note>
+              <ion-label>Sede: Sede clínica del norte</ion-label>
+            </div>
+          </ion-item>
+          <ion-item style="font-size: small;" color="primary">
+            <ion-label>Dia: Lunes 09 de Junio</ion-label>
+            <ion-label style="text-align: right;">Hora 08:20 am</ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-list>
+  
+      <ion-list *ngSwitchCase="'pasadas'">
+        <ion-card>
+          <ion-item >
+            <div class="fecha">
+              <ion-note>10</ion-note>
+              <ion-label>JUNIO</ion-label>
+            </div>
+            &nbsp;&nbsp;
+            <div class="esp">
+              <ion-label>Cita Para: Juana Perez</ion-label>
+              <ion-label>Ernestina Gomez Arias</ion-label>
+              <ion-note>Especialidad: Cardiología</ion-note>
+              <ion-label>Sede: Sede clínica del norte</ion-label>
+            </div>
+          </ion-item>
+          <ion-item style="font-size: small;" color="primary">
+            <ion-label>Dia: Lunes 09 de Junio</ion-label>
+            <ion-label style="text-align: right;">Hora 08:20 am</ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-list>
+    </div>
+  </ion-toolbar>
+
+</ion-content>
