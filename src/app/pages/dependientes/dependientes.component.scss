@@ -1,0 +1,50 @@
+ion-content{
+    text-align: center;
+    --background:rgb(240, 240, 240);
+    ion-card{
+        padding: 2%;
+    }
+    ion-card .contenedor{
+        --background:#fff;
+        .perfil{
+            ion-img{
+                width: 60px;
+                height: 60px;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+        }
+        .esp{
+            margin: 1%;
+            ion-note{
+                color: gray;
+                font-weight: bold;
+                font-size: small;
+            }
+            ion-label{
+                color: gray;
+                font-size: small;
+            }
+        }
+    }
+    ion-card .agregar{
+        text-align: right;
+        ion-note{
+            color: rgb(44, 186, 252);
+        }
+    }
+    .agregarFam{
+        text-transform: capitalize;
+        width: 95%;
+        text-align: right;
+        border: solid 1px rgb(44, 186, 252);
+        border-radius:5px;
+        --background:#fff;
+        height: 50px;
+        color:rgb(44, 186, 252);
+      }
+}
+
+//MODAL

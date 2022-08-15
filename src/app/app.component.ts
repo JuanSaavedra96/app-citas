@@ -28,32 +28,32 @@ export class AppComponent {
       {
         title : "Mis Citas",
         url   : "/citas-medicas",
-        icon  : "home"
+        icon  : "today"
       },
       {
         title : "Resultados de Laboratorio",
         url   : "/laboratorio",
-        icon  : "home"
+        icon  : "flask"
       },
       {
         title : "Mis Recetas",
         url   : "/recetas",
-        icon  : "home"
+        icon  : "medkit"
       },
       {
         title : "Mis Familiares",
         url   : "/dependientes",
-        icon  : "home"
+        icon  : "people"
       },
       {
         title : "Beneficios",
         url   : "/beneficios",
-        icon  : "home"
+        icon  : "heart"
       },
       {
         title : "Cerrar Sesion",
         url   : "/login",
-        icon  : "home"
+        icon  : "close"
       },
     ];
   }

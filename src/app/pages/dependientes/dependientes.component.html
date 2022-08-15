@@ -3,6 +3,142 @@
     <ion-buttons slot="start" (click)="regresar()">
       <ion-icon size="large" name="arrow-back-outline"></ion-icon>
     </ion-buttons>
-    <ion-title>Dependientes</ion-title>
+    <ion-title>Mis Dependientes</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  <br>
+  <ion-card>
+    <ion-item class="contenedor">
+      <div class="perfil">
+        <ion-img src="/assets/img/perfil.jpg"></ion-img>
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="esp">
+        <ion-note>Juan Saavedra Delgado</ion-note><br>
+        <ion-label>Parentesco: Hijo</ion-label>
+      </div>
+    </ion-item>
+    <div class="agregar">
+      <ion-note> agregar</ion-note>
+    </div>
+  </ion-card>
+  <ion-card>
+    <ion-item class="contenedor">
+      <div class="perfil">
+        <ion-img src="/assets/img/perfil.jpg"></ion-img>
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="esp">
+        <ion-note>Juan Saavedra Delgado</ion-note><br>
+        <ion-label>Parentesco: Hijo</ion-label>
+      </div>
+    </ion-item>
+    <div class="agregar">
+      <ion-note> agregar</ion-note>
+    </div>
+  </ion-card>
+  <ion-button class="agregarFam" (click)="openModal()">Agregar familiar</ion-button>
+</ion-content>
+
+<!-- <ion-content class="ion-padding">
+  <ion-button id="open-custom-dialog" expand="block">Open Custom Dialog</ion-button>
+
+  <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+    <ng-template>
+      <div class="wrapper">
+        <h1>Dialog header</h1>
+
+        <ion-list lines="none">
+          <ion-item button="true" detail="false" (click)="modal.dismiss()">
+            <ion-icon name="person-circle"></ion-icon>
+            <ion-label>Item 1</ion-label>
+          </ion-item>
+          <ion-item button="true" detail="false" (click)="modal.dismiss()">
+            <ion-icon name="person-circle"></ion-icon>
+            <ion-label>Item 2</ion-label>
+          </ion-item>
+          <ion-item button="true" detail="false" (click)="modal.dismiss()">
+            <ion-icon name="person-circle"></ion-icon>
+            <ion-label>Item 3</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ng-template>
+  </ion-modal>
+</ion-content> -->
+
+<!-- <ion-content class="ion-padding">
+  <ion-button id="open-modal" expand="block">Open Modal</ion-button>
+
+  <ion-modal #modal trigger="open-modal">
+    <ion-card>
+      <ion-card (click)="detalleReceta()">
+        <ion-item class="contenedor">
+          <div class="fecha">
+            <ion-note>03</ion-note>
+            <ion-label>MAYO</ion-label>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="esp">
+            <ion-note>Especialista:</ion-note><br>
+            <ion-label>JUAN LUIS SAAVEDRA DELGADO</ion-label>
+            <ion-note>Especialidad:</ion-note><br>
+            <ion-label>Cardiología</ion-label>
+          </div>
+        </ion-item>
+        <div class="vigencia">
+          <ion-note> vigente hasta 30 de mayo</ion-note>
+        </div>
+      </ion-card>
+    </ion-card>
+    
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="light" (click)="modal.dismiss()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img src="https://i.pravatar.cc/300?u=b"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>Connor Smith</h2>
+              <p>Sales Rep</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img src="https://i.pravatar.cc/300?u=a"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>Daniel Smith</h2>
+              <p>Product Designer</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img src="https://i.pravatar.cc/300?u=d"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>Greg Smith</h2>
+              <p>Director of Operations</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img src="https://i.pravatar.cc/300?u=e"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>Zoey Smith</h2>
+              <p>CEO</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+   
+  </ion-modal>
+</ion-content> -->

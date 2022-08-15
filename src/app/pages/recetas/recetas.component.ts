@@ -16,4 +16,8 @@ export class RecetasComponent implements OnInit {
   regresar(){
     this.router.navigate(['home']);
   }
+  detalleReceta(){
+    this.router.navigate(['recetas/',1]);
+    console.log(this.router.navigate(['recetas/',1]))
+  }
 }

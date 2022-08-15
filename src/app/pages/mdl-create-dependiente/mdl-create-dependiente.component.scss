@@ -1,0 +1,91 @@
+ion-content{
+    --background: white!important; 
+    text-align: center;
+  }
+  ion-item {
+    border: 1px solid grey;
+    border-radius: 5%;
+  } 
+  ion-input{
+    color:grey;
+    height: 50px;
+    border-bottom:none!important; 
+ }
+ ion-label{
+    font-size:.8em;
+  }
+
+  .formulario{
+    margin-top:10px!important;
+    padding:15px;
+  }
+  input::placeholder{
+      font-size:.8em;
+      color:#061175!important;
+      padding-left:10px!important;
+  }
+  ion-select{
+        width: 100%!important;
+        min-width:100%;
+        background:#fff;
+        font-size:.8em;
+        color:#061175!important;
+        height:50px;
+
+  }
+  ion-datetime{
+    font-size:.8em;
+    placeholder{
+      color:#061175!important;
+      }
+    }
+    .error{
+      font-size:.7em;
+      color:red;
+      margin-top: 2px;
+      margin-left:20px;
+      width: 90%;
+    }
+    .error:before{
+      content:'*';
+      margin-right: 5px;
+    }
+    .terminosyCondiciones{
+      color:#061175;
+    }
+    .outpadding{
+      width:92%;
+      margin-left:5%;
+      height: 50px;
+      background:#fff!important;
+      font-size:1.3em;
+      text-align: left;
+    }
+    .datetime-md .datetime-placeholder{
+      margin-left: -15px;
+      font-size: .9em;  
+      color:#061175;
+    }
+    .select-text {
+      color:#000!important;
+    }
+ion-label{
+  color:grey!important;
+  //background-color: grey;
+}
+ion-datetime{
+  background-color: #fff;
+  color: grey;
+}
+ion-checkbox{
+  --background:#FFF;
+  border: solid 1px grey;
+}
+.alto50{
+  height: 50px;
+  margin-top:15px;
+  --background:#3880ff;
+  color:#fff;
+  width:90%;
+  margin-left: 5%;
+}

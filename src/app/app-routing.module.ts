@@ -43,6 +43,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/recetas/recetas.module').then(m => m.RecetasModule)
   },
   {
+    path: 'recetas/:id',
+    loadChildren: () => import('./pages/recetas/recetas.module').then(m => m.RecetasModule)
+  },
+  {
     path: 'reservar-cita',
     loadChildren: () => import('./pages/reservar-cita/reservar-cita.module').then(m => m.ReservarCitaModule)
   },

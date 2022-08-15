@@ -9,7 +9,7 @@
 <ion-content>
   <br>
   <ion-note>Tienes 2 recetas hasta el momento</ion-note>
-  <ion-card>
+  <ion-card (click)="detalleReceta()">
     <ion-item class="contenedor">
       <div class="fecha">
         <ion-note>03</ion-note>
@@ -27,7 +27,7 @@
       <ion-note> vigente hasta 30 de mayo</ion-note>
     </div>
   </ion-card>
-  <ion-card>
+  <ion-card  (click)="detalleReceta()">
     <ion-item class="contenedor">
       <div class="fecha">
         <ion-note>10</ion-note>
