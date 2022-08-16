@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="regresar()">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Financiador</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="titulo">
+    <ion-note color="medium">Selecciona para quien es la cita y el financiador</ion-note>
+  </div>
+  <div style="display:flex;">
+    <ion-button size="small" class="me" [disabled]="disabledBtnPrincipal" (click)="seleccionarCita()"><ion-icon name="person" slot="start"></ion-icon>Para mi</ion-button>
+    <ion-button size="small" class="familiar" [disabled]="disabledBtnPrincipal" (click)="seleccionarCita()"><ion-icon name="people" slot="start"></ion-icon>Para un familiar</ion-button>
+  </div>
+  <div class="bloqueFinanciador" *ngIf="disabledBtnPrincipal">
+    <br>
+    <hr>
+    <br>
+      <ion-text><h5>FINANCIADORES</h5></ion-text>
+      <ion-note color="medium">Escoge el financiador que más te convenga</ion-note>
+    
+    <ion-card class="cardFinanc" [ngClass]="{'cardFinanc':disabledBtnFinanc==false,'cardFinancSeleccion':disabledBtnFinanc==true}" (click)="seleccionarFinanciador()">
+      <div class="tipo">
+        <ion-label>Particular</ion-label>
+      </div>
+      <div class="precio">
+        <ion-note>S/ 65.00</ion-note>
+      </div>
+    </ion-card>
+    <ion-card class="cardFinanc">
+      <div class="tipo">
+        <ion-label>Plan clínica del norte</ion-label>
+      </div>
+      <div class="precio">
+        <ion-note>S/ 55.00</ion-note>
+      </div>
+    </ion-card>
+    <ion-button type="submit" fill="block" color="primary" class="pago" [disabled]="!disabledBtnFinanc" (click)="gotoPago()">IR A PAGO</ion-button>
+  </div>
+</ion-content>

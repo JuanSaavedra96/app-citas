@@ -23,27 +23,27 @@ export class AppComponent {
       {
         title : "Home",
         url   : "/home",
-        icon  : "home"
+        icon  : "/assets/img/sidemenu/home.svg"
       },
       {
         title : "Mis Citas",
         url   : "/citas-medicas",
-        icon  : "today"
+        icon  : "/assets/img/sidemenu/miscitas.svg"
       },
       {
         title : "Resultados de Laboratorio",
         url   : "/laboratorio",
-        icon  : "flask"
+        icon  : "/assets/img/sidemenu/resultado.svg"
       },
       {
         title : "Mis Recetas",
         url   : "/recetas",
-        icon  : "medkit"
+        icon  : "/assets/img/sidemenu/misrecetas.svg"
       },
       {
         title : "Mis Familiares",
         url   : "/dependientes",
-        icon  : "people"
+        icon  : "/assets/img/sidemenu/misfamiliares.svg"
       },
       {
         title : "Beneficios",
@@ -53,7 +53,7 @@ export class AppComponent {
       {
         title : "Cerrar Sesion",
         url   : "/login",
-        icon  : "close"
+        icon  : "/assets/img/sidemenu/cerrarsesion.svg"
       },
     ];
   }

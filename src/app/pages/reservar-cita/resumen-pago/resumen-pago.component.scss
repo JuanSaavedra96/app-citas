@@ -1,0 +1,36 @@
+ion-content{
+    text-align: center;
+    .img{
+        width: 28%;
+        ion-img{
+            width: 70px;
+        }
+    }
+    .containText{
+        text-align: right;
+        ion-note{
+            font-weight: bold;
+        }
+        ion-label{
+            font-size: small;
+            margin-top: 2%;
+        }
+    }
+    .precio{
+        text-align: right;
+        margin: 15px;
+    }
+    .clinica{
+        height: 50px;
+        margin-top:15px;
+        --background:#0da88e;
+        color:#fff;
+        width:90%;
+      }
+    .confirmarPago{
+        height: 30px;
+        margin-top:15px;
+        color:#fff;
+        width: 90%;
+      }
+}

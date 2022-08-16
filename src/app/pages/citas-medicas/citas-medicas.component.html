@@ -20,7 +20,7 @@
     <div [ngSwitch]="type">
       <ion-list *ngSwitchCase="'proximas'">
         <ion-card>
-          <ion-item >
+          <ion-item  (click)="detalleCita()">
             <div class="fecha">
               <ion-note>03</ion-note>
               <ion-label>MAYO</ion-label>

@@ -74,3 +74,9 @@
     --background: rgb(14 116 144);
     --color: white;
   }
+
+  hr {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 90%;
+  }

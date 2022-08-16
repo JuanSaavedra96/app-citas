@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="regresar()">
+      <ion-icon size="large" name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Mis Citas / Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <div>
+      <ion-img src="/assets/img/doctor.svg"></ion-img>
+    </div>
+    <div class="containText">
+      <ion-text><h5>JUAN LUIS SAAVEDRA DELGADO</h5></ion-text>
+      <ion-text><h5><b>Especialidad: </b>Cardiologia</h5></ion-text>
+      <ion-text><h5><b>Sede: </b>Clinica del norte</h5></ion-text>
+      <ion-text><h5><b>Hora: </b>08:20 am</h5></ion-text>
+      <ion-text><h5><b>Dia: </b>Lunes 09 de Junio</h5></ion-text>
+      <ion-text><h5><b>Consultorio: </b>402 - Segundo Piso</h5></ion-text>
+    </div>
+  </ion-card>
+  <div style="display:flex">
+    <ion-button type="submit" fill="block" color="primary" class="eliminar">Eliminar</ion-button>
+    <ion-button type="submit" fill="block" color="primary" class="volver">Volver</ion-button>
+  </div>
+  <ion-text color="primary"><h5>Recuerda llegar 15 minutos antes</h5></ion-text>
+</ion-content>

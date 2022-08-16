@@ -10,8 +10,8 @@
   <br><br>
   <ion-row>
     <ion-col size="12">
-      <ion-item no-lines color="tint">
-        <ion-select  formControlName="documentType" name="documentType" placeholder="Seleccione una Sede" >
+      <ion-item  lines="none" color="tint">
+        <ion-select name="documentType" placeholder="Seleccione una Sede" >
           <ion-select-option >SEDE CLINICA DEL NORTE</ion-select-option>
           <ion-select-option >SEDE CLINICA DEL CENTRO</ion-select-option>
           <ion-select-option >SEDE CLINICA DEL NOR OESTE</ion-select-option>
@@ -22,9 +22,9 @@
   </ion-row>
   <ion-row>
     <ion-col size="12">
-      <ion-item no-lines color="tint">
-        <ion-select interface="action-sheet" formControlName="documentType" name="documentType" placeholder="Seleccione una Especialidad">
-          <ion-select-option >ANESTESIOLOGÍA</ion-select-option>
+      <ion-item lines="none" color="tint">
+        <ion-select interface="action-sheet" name="especialidad" [(ngModel)]="especialidad"  placeholder="Seleccione una Especialidad">
+          <ion-select-option  value="ANESTESIOLOGÍA">ANESTESIOLOGÍA</ion-select-option>
           <ion-select-option >CARDIOLOGÍA</ion-select-option>
           <ion-select-option >CIRUGÍA DE CABEZA</ion-select-option>
           <ion-select-option >DERMATOLOGÍA</ion-select-option>
@@ -34,8 +34,8 @@
   </ion-row>
   <ion-row>
     <ion-col size="12">
-      <ion-item no-lines color="tint">
-        <ion-select  formControlName="documentType" name="documentType" placeholder="Seleccione una Fecha" >
+      <ion-item lines="none" color="tint">
+        <ion-select  name="documentType" placeholder="Seleccione una Fecha" >
           <ion-select-option >SEDE CLINICA DEL NORTE</ion-select-option>
           <ion-select-option >SEDE CLINICA DEL CENTRO</ion-select-option>
           <ion-select-option >SEDE CLINICA DEL NOR OESTE</ion-select-option>
@@ -44,4 +44,53 @@
       </ion-item>
     </ion-col>
   </ion-row>
+  <ion-card *ngIf="especialidad!=''">
+    <ion-item lines="none">
+      <div class="imagen">
+        <ion-img src="/assets/img/doctor.svg"></ion-img>
+      </div>
+      <div class="cuerpo">
+        <ion-label color="medium">JUAN LUIS SAAVEDRA DELGADO</ion-label>
+        <ion-note color="primary">Cardiología</ion-note>
+        <ion-label color="medium">Sede: Sede clínica del norte</ion-label>
+      </div>
+    </ion-item>
+    <div class="bottom">
+      <ion-note color="medium">Próximos días disponibles</ion-note>
+    </div>
+    <br>
+    <ion-row class="dias">
+      <ion-col size="2" (click)="seleccionarDia()"><ion-label>01</ion-label><br><ion-note color="medium">Lun</ion-note></ion-col>
+      <ion-col size="2"><ion-label>02</ion-label><br><ion-note color="medium">Mar</ion-note></ion-col>
+      <ion-col size="2"><ion-label>03</ion-label><br><ion-note color="medium">Mie</ion-note></ion-col>
+      <ion-col size="2"><ion-label>04</ion-label><br><ion-note color="medium">Jue</ion-note></ion-col>
+      <ion-col size="2"><ion-label>05</ion-label><br><ion-note color="medium">Vie</ion-note></ion-col>
+      <ion-col size="2"><ion-label>06</ion-label><br><ion-note color="medium">Sab</ion-note></ion-col>
+      <ion-col size="2"><ion-label>07</ion-label><br><ion-note color="medium">Dom</ion-note></ion-col>
+      <ion-col size="2"><ion-label>08</ion-label><br><ion-note color="medium">Lun</ion-note></ion-col>
+      <ion-col size="2"><ion-label>09</ion-label><br><ion-note color="medium">Mar</ion-note></ion-col>
+    </ion-row>
+    <div class="horario" *ngIf="dia!=''">
+      <div style="text-align: center;">
+        <ion-note color="medium">Seleccione una hora de tu conveniencia</ion-note>
+      </div>
+      <div>
+        <ion-button (click)="seleccionarHorario()">8:00</ion-button>
+        <ion-button>8:20</ion-button>
+        <ion-button>8:40</ion-button>
+        <ion-button>9:00</ion-button>
+        <ion-button>9:20</ion-button>
+        <ion-button>9:40</ion-button>
+        <ion-button>10:00</ion-button>
+        <ion-button>10:20</ion-button>
+        <ion-button>10:40</ion-button>
+        <ion-button>11:00</ion-button>
+        <ion-button>11:20</ion-button>
+        <ion-button>11:40</ion-button>
+        <ion-button>12:00</ion-button>
+        <ion-button>12:20</ion-button>
+      </div>
+    </div>
+  </ion-card>
 </ion-content>
+

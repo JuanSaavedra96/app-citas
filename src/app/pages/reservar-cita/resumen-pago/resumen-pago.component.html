@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="regresar()">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Resumen / Pago</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br>
+    <ion-note>Resumen de la cita a reservar</ion-note>
+    <ion-card>
+      <ion-item lines="none">
+        <div class="img">
+          <ion-img src="/assets/img/doctor.svg"></ion-img>
+        </div>
+        <div class="containText">
+          <ion-note color="medium">JUAN LUIS SAAVEDRA DELGADO</ion-note>
+          <ion-label color="medium"><b>Especialidad: </b>Cardiologia</ion-label>
+          <ion-label color="medium"><b>Sede: </b>Clinica del norte</ion-label>
+          <ion-label color="medium"><b>Dia: </b>Lunes 09 de Junio</ion-label>
+          <ion-label color="medium"><b>Hora: </b>08:20 am</ion-label>
+          <ion-label color="medium"><b>Financiador: </b>Particular</ion-label>
+        </div>
+      </ion-item>
+      <div class="precio">
+        <ion-note color="primary"><b></b>Precio de cita: S/ 65.00</ion-note>
+      </div>
+    </ion-card>
+
+    <ion-button type="button" class="clinica">Pago en clínica</ion-button>
+    <ion-button type="button" class="clinica" (click)="pagoOnline()">Pago en línea</ion-button>
+
+    <ion-card *ngIf="!mostrarPagoOnline">
+      <ion-note color="medium">PAGO EN LÍNEA</ion-note>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item color="tint">
+              <ion-label color="medium" position="floating">N° de tarjeta</ion-label>
+              <ion-input type="text" name="name"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-button color="primary" type="button" class="confirmarPago">Confirmar Pago</ion-button>
+    </ion-card>
+</ion-content>

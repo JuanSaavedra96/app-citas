@@ -1,3 +1,52 @@
-ion-select{
-    width: 100%;
+ion-content{
+    ion-select{
+        left: 5%;
+        width: 100%;
+        border:solid 1px rgb(175, 175, 175);
+        border-radius: 5px;
+    }
+    ion-img{
+        width: 60px;
+    }
+    .imagen{
+        //margin-left: 1px;
+        width: 25%;
+        margin-top: 12px;
+    }
+    .cuerpo{
+        margin-top: 12px;
+        font-size:small ;
+        font-weight: bold;
+    }
+    .bottom{
+        text-align: right;
+        margin-right: 10px;
+        ion-note{
+            font-size: small;
+        }
+    }
+    .dias{
+        display: flex;
+        text-align: center;
+        ion-label{
+            padding: 15%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            background: #3880ff;
+            color: #fff;
+        }
+        br{
+            line-height:30px;
+        }
+    }
+    //CUERPO HORARIO DE FECHA
+    .horario{
+        ion-button{
+            width: 15%;
+            margin: 2.5%;
+            height: 25px;
+            --background:#135a97;
+        }
+    }
 }

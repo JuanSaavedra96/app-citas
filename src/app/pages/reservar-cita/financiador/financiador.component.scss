@@ -1,0 +1,83 @@
+ion-content{
+    text-align: center;
+    .titulo{
+        margin-top: 5%;
+    }
+    .me{
+        height: 50px;
+        margin-top:15px;
+        --background:#3880ff;
+        color:#fff;
+        width:42%;
+        margin-left: 6%;   
+        text-transform:capitalize; 
+      }
+    .familiar{
+        height: 50px;
+        margin-top:15px;
+        --background:#135a97;
+        color:#fff;
+        width:42%;
+        margin-left: 5%;    
+        border: solid 1px #fff;
+        text-transform:capitalize; 
+      }
+      ion-icon{
+        color: #fff;
+        --background:#fff;
+      }
+    .bloqueFinanciador{
+        //Sin Seleccionar
+        .cardFinanc{
+            display: flex;
+            margin: 5%;
+            padding: 4%;
+            .tipo{
+                width: 50%;
+                text-align: left;
+                font-size: small;
+                font-weight: bold;
+            }
+            .precio{
+                width: 50%;
+                text-align: right;
+                ion-note{
+                    font-size: small;
+                    font-weight: bold;  
+                }
+            }
+        }
+        //Seleccionado
+        .cardFinancSeleccion{
+            display: flex;
+            margin: 5%;
+            padding: 4%;
+            --background:#3880ff;
+            
+            .tipo{
+                width: 50%;
+                text-align: left;
+                font-size: small;
+                color:#fff;
+                font-weight: bold;
+            }
+            .precio{
+                width: 50%;
+                text-align: right;
+                ion-note{
+                    font-size: small;
+                    color:#fff;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .pago{
+        height: 50px;
+        margin-top:15px;
+        --background:#3880ff;
+        color:#fff;
+        width:90%;
+        margin-left: 5%;
+      }
+}

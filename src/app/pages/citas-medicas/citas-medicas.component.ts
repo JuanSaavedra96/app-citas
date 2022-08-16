@@ -21,4 +21,7 @@ export class CitasMedicasComponent implements OnInit {
     console.log( ev.detail.value);
     this.type=ev.detail.value;
   }
+  detalleCita(){
+    this.router.navigate(['citas-medicas/',1]);
+  }
 }

@@ -62,6 +62,10 @@ const routes: Routes = [
     path: 'citas-medicas',
     loadChildren: () => import('./pages/citas-medicas/citas-medicas.module').then(m => m.CitasMedicasModule)
   },
+  {
+    path: 'citas-medicas/:id',
+    loadChildren: () => import('./pages/citas-medicas/citas-medicas.module').then(m => m.CitasMedicasModule)
+  },
   /* {
     path: 'home/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
