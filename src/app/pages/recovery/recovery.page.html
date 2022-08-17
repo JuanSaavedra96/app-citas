@@ -55,28 +55,35 @@
                          formControlName="cuarto"
                          [(ngModel)]="cuarto"></ion-input>
              </ion-col>
-            </ion-row>
-            <div class="containerInputs">
-              <p class="recuerda">Recuerda ingresar minimo 8 carácteres y al menos un número</p>
-              <div size="12" class="center">
-                <p class="titulo">Ingresa nueva contraseña</p>
-              </div>
-                 <ion-item>
-                     <ion-label position="floating">contraseña nueva</ion-label>
-                     <ion-input type="password"
-                                 formControlName="password"
-                                 ngModel>
-                     </ion-input>
-                   </ion-item>
+      </ion-row>
+      <div class="containerInputs">
+        <p class="recuerda"><!-- Recuerda ingresar minimo 8 carácteres y al menos un número --></p>
+        <ion-row>
 
-                   <ion-item>
-                       <ion-label position="floating">Repetir contraseña nueva</ion-label>
-                       <ion-input type="password"
-                                   formControlName="passwordRepeat"
-                                   ngModel>
-                       </ion-input>
-                     </ion-item>
-              </div>
+          <ion-col size="12" class="center">
+            <p class="titulo">Ingresa nueva contraseña</p>
+          </ion-col>
+          <ion-col size="12" class="center">
+            <ion-item>
+                <ion-label position="floating">contraseña nueva</ion-label>
+                <ion-input type="password"
+                            formControlName="password"
+                            ngModel>
+                </ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label position="floating">Repetir contraseña nueva</ion-label>
+                  <ion-input type="password"
+                              formControlName="passwordRepeat"
+                              ngModel>
+                  </ion-input>
+                </ion-item>
+          </ion-col>
+
+        </ion-row>
+      </div>
+      
             <div class="center">
               <ion-button
                       block

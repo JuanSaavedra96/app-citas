@@ -1,5 +1,6 @@
 <ion-content>
-  <div class="circulo">
+  <div >
+    <ion-img class="logo" src="/assets/logo/logo.svg"></ion-img>
   </div> 
       <div class="containerInputs">
           <form #formulario="ngForm">
@@ -15,14 +16,14 @@
                 <ion-col size="12">
                   <ion-item  no-lines>
                     <ion-label position="floating">Email</ion-label>
-                      <ion-input type="text" required name="email" [(ngModel)]="dni">
+                      <ion-input type="text" required name="email" maxlength="8" [(ngModel)]="dni">
                       </ion-input>
                 </ion-item>
               </ion-col>
               <ion-col size="12">
                 <ion-item no-lines  >
                   <ion-label position="floating">Contraseña</ion-label>
-                    <ion-input type="password"  name="password" id="password" >
+                    <ion-input type="password"  name="password" id="password" [(ngModel)]="password">
                     </ion-input>
                     <ion-button class="eyePass" fill="clear" (click)="mostrarContrasena()">
                       <ion-icon *ngIf="mostrar_ocultar==false" slot="icon-only" name="eye-outline" ></ion-icon>

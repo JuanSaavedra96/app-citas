@@ -9,15 +9,16 @@ import { map } from 'rxjs/operators';
 export class EndpointService {
   private SERVER = API_ENDPOINT;
   //private newLogin = this.SERVER + '/api/items/login';
-  private newLogin = this.SERVER + '/user/login';
+  private newLogin = this.SERVER + '/users/login';
   constructor(public http: HttpClient) { }
 
-  newLoginWithDni(documentNumber: string){
+  newLoginWithDni(documentNumber: string,password:string){
     const authorization = JSON.parse(localStorage.getItem('authorization'));
-    let headers = new HttpHeaders({"Authorization": authorization.authorization});
+    /* let headers = new HttpHeaders({"Authorization": authorization.authorization}); */
     //let params = {documentNumber};
-    let params = {'usuario':documentNumber};
-     return this.http.post(this.newLogin, params,{headers}).pipe(
+    let params = {'usuario':documentNumber,
+                  'clave':password};
+     return this.http.post(this.newLogin, params).pipe(
        map(resp => {
          return resp
        }), err => {

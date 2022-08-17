@@ -44,18 +44,21 @@ export class LoginPage implements OnInit {
   
   /* 
   FUNCIÓN PARA LOGIN */
-  startSesion1(){
+  startSesion(){
     //this.router.navigate(['home']);
-    this.newsSrv.newLoginWithDni(this.dni).subscribe((data:any) => {
-      console.log('data:', data);
-       this.msg = "";
-      localStorage.setItem('authorization', JSON.stringify(data));
-      localStorage.setItem('name', data.name);
+    this.newsSrv.newLoginWithDni(this.dni,this.password).subscribe((data:any) => {
+      console.log('data:', data.data);
+      console.log('data:', data.data.nombre);
+      /*localStorage.setItem('authorization', JSON.stringify(data));
       localStorage.setItem('visto', 'ok');
-      /* this.router.navigate(['home']);
-      this.documentId = null;
+      this.documentId = null;*/
+      localStorage.setItem('authorization', JSON.stringify(data));
+      localStorage.setItem('nombre', data.data.nombre);
+      /* console.log(localStorage.setItem('nombre', data.data.nombre)) */
+      this.msg = "";
       this.dni = "";
-      this.password = ""; */ 
+      this.password = "";  
+      this.router.navigate(['home']);
     }, async err =>{
       console.log(err);
       this.msg = err.error.message;
@@ -68,7 +71,7 @@ export class LoginPage implements OnInit {
     });
   }
 
-  startSesion(){
+  startSesion1(){
     this.router.navigate(['home']);
   }
 
@@ -84,7 +87,8 @@ export class LoginPage implements OnInit {
 
   async goToRecovery(){
     const alert = await this.alertCtrl.create({
-      header:"RECUPERAR CONTRASEÑA",
+      subHeader:"RECUPERAR CONTRASEÑA",
+      cssClass:'headerRecovery',
       message:'Ingresa tu correo electronico y te enviaremos un código para recuperar tu cuenta',
       inputs :[
         {

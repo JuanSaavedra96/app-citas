@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AlertController, LoadingController } from '@ionic/angular';
+import { AlertController, LoadingController, MenuController } from '@ionic/angular';
 import { Router, ActivatedRoute } from '@angular/router';
 
 
@@ -25,7 +25,8 @@ export class RecoveryPage implements OnInit {
               public form:        FormBuilder,
               public alertCtrl: AlertController,
               public loadingCtrl : LoadingController,
-              public routes: ActivatedRoute) {      
+              public routes: ActivatedRoute,
+              private menu: MenuController) {      
                 this.formCode = this.form.group({
                   primero : [],
                   segundo : [],
@@ -34,6 +35,8 @@ export class RecoveryPage implements OnInit {
                   password   : ['', [Validators.required]],
                   passwordRepeat   : ['', [Validators.required]]
               });
+              
+                  this.menu.enable(false);
                }
 
   ngOnInit() {

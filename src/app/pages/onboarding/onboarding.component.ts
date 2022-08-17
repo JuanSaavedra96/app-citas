@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -9,7 +10,9 @@ import { Router } from '@angular/router';
 })
 export class OnboardingComponent implements OnInit {
   public authPublic
-  constructor(public router: Router) {
+  constructor(public router: Router,
+    private menu : MenuController) {
+    this.menu.enable(true);
   }
   ngOnInit() {}
 

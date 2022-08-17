@@ -14,10 +14,12 @@ ion-content{
     }
     .rectanguloInput{
       border: 2px solid #96999C;
-      height: 40px;
-      width: 40px!important;
+      height: 20%!important;
+      width: 20%!important;
       margin:2px;
       border-radius:5px;
+      text-align: center;
+      font-size: large;
     }
     .center{
       text-align:center;
@@ -34,7 +36,7 @@ ion-content{
     }
     .botonRecuperar{
       background:#00B6A3;
-      width:100%;
+      width:90%;
     }
     .newCode{
       color:#062F51;

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   appPages : any;
   
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+ /*  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders']; */
   constructor() {
     this.sidemenu();
   }

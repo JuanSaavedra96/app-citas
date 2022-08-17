@@ -3,10 +3,11 @@
     }
     ion-content{
         --background: #0392ce!important; 
+        text-align: center;
       }
     ion-input {
         color:grey;
-        height: 50px;
+        //height: 20px;
         border-bottom:none!important;
     }
     ion-select{
@@ -20,6 +21,7 @@
     ion-item{
         border: 1px solid grey;
         border-radius: 5px;
+        height: 50px;
     }
     .inicioSesion {
         margin-top: 5px;
@@ -28,7 +30,7 @@
         height: 50px;
         border-top-right-radius: 15px;
         width:90%;
-        margin-left:5%;
+        //margin-left:5%;
         --background: #135a97!important;
     }
     ion-label{
@@ -57,7 +59,7 @@
     .register{
       text-transform: capitalize;
       width: 90%;
-      margin-left:5%;	
+      //margin-left:5%;	
       text-align: right;
       border: solid 2px #fff;
       border-radius:5px;
@@ -66,24 +68,17 @@
       color:#fff;
       //--border-color: rgb(44, 186, 252);
     }
-    
-  .circulo {
-    width: 100px;
-    height: 100px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background: #5cb85c;
-    margin-left: 35%;
-    margin-top: 10%;
-}
+    ion-content div {
+      .logo {
+        width: 40%;
+        margin-left: 30%;
+        margin-top: 5%;
+      }
+    }
 
 .eyePass{
   position: absolute;
-  //align-items: center;
   right: 0;
-  //bottom: 15%;
-  top: 7px;
+  top: 10px;
   color:black;
-  //width: 100px!important;
 }

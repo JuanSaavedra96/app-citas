@@ -9,26 +9,26 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <!-- <ion-toolbar>
-      <ion-title size="large">HOLA</ion-title>
-    </ion-toolbar> -->
-  </ion-header>
+    <ion-row class="containerDatos">
+      <ion-col size="12" class="nombreUsuario">
+        Bienvenido <br> {{nombreUsuario}}
+      </ion-col>
+    </ion-row>  
   
   <div id="container">
     <ion-note>En qué podemos ayudarte hoy?</ion-note>
       <ion-item color="primary" (click)="laboratorio()">
-        <ion-icon class="iconPrincipal" name="flask-outline" slot="start"></ion-icon>
+        <ion-icon class="iconPrincipal" src="/assets/img/laboratorioIcon.svg" slot="start"></ion-icon>
         <ion-label  >Mis resultados <br> de Laboratiorio</ion-label>
         <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
       </ion-item>
       <ion-item color="tertiary" (click)="misRecetas()">
-        <ion-icon class="iconPrincipal" name="medkit-outline" slot="start"></ion-icon>
+        <ion-icon class="iconPrincipal" src="/assets/img/misrecetasIcon.svg" slot="start"></ion-icon>
         <ion-label  >Mis recetas</ion-label>
         <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
       </ion-item>
       <ion-item color="medium" (click)="citasMedicas()">
-        <ion-icon class="iconPrincipal" name="today-outline" slot="start"></ion-icon>
+        <ion-icon class="iconPrincipal" src="/assets/img/miscitasIcon.svg" slot="start"></ion-icon>
         <ion-label  >Mis citas médicas</ion-label>
         <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
       </ion-item>

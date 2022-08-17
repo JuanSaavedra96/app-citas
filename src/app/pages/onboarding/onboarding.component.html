@@ -1,11 +1,12 @@
-<ion-content>
-  <br><br><br><br><br>
-  <h1>APP<br>CITAS<br>MÉDICAS</h1>
+<ion-content (click)="goToLogin()">
+  <h1>CLÍNICA<br>AREQUIPA</h1>
+  <h2>APP<br>CITAS<br>MÉDICAS</h2>
+  <ion-img src="/assets/img/startApp.png"></ion-img>
  
 </ion-content>
-<ion-footer>
+<ion-footer (click)="goToLogin()">
   <ion-toolbar>
-    <ion-buttons slot="end" (click)="goToLogin()">
+    <ion-buttons slot="end" >
       <ion-button >
         <ion-icon name="arrow-forward"></ion-icon>
       </ion-button>
