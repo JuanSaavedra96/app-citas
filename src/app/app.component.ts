@@ -45,11 +45,11 @@ export class AppComponent {
         url   : "/dependientes",
         icon  : "/assets/img/sidemenu/misfamiliares.svg"
       },
-      {
+      /* {
         title : "Beneficios",
         url   : "/beneficios",
         icon  : "heart"
-      },
+      }, */
       {
         title : "Cerrar Sesion",
         url   : "/login",

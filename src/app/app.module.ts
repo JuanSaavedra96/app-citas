@@ -10,7 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { OnboardingComponent } from './pages/onboarding/onboarding.component';
 import { MdlCreateDependienteComponent } from './pages/mdl-create-dependiente/mdl-create-dependiente.component';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

@@ -24,6 +24,8 @@ export class MdlCreateDependienteComponent implements OnInit {
   public dniInvalid = false;
   public sexo;
   aprobed: boolean = false;
+  public _documenType;
+  public document;
   constructor(private modalCtrl: ModalController,
     public fb: FormBuilder) { }
 
