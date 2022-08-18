@@ -12,6 +12,7 @@ import { MdlCreateDependienteComponent } from './pages/mdl-create-dependiente/md
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
+import { LoginGuard } from './guard/login.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,7 @@ import { environment } from 'src/environments/environment';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },LoginGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

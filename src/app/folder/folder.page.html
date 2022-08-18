@@ -10,8 +10,13 @@
 
 <ion-content [fullscreen]="true">
     <ion-row class="containerDatos">
-      <ion-col size="12" class="nombreUsuario">
-        Bienvenido <br> {{nombreUsuario}}
+      <ion-col size="8" class="nombreUsuario">
+        <ion-note color="medium">Bienvenido </ion-note><br>
+        <ion-label>{{nombreUsuario}}</ion-label><br>
+        <ion-label color="medium">{{correo}}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-img src="/assets/img/perfil.jpg"></ion-img>
       </ion-col>
     </ion-row>  
   

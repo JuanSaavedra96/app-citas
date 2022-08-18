@@ -12,7 +12,7 @@ export class OnboardingComponent implements OnInit {
   public authPublic
   constructor(public router: Router,
     private menu : MenuController) {
-    this.menu.enable(true);
+    this.menu.enable(false);
   }
   ngOnInit() {}
 

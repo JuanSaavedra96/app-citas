@@ -3,14 +3,28 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list  id="inbox-list">
-          <ion-list-header>JUAN SAAVEDRA</ion-list-header>
-          <ion-note>saavedraj@royal.net</ion-note>
+          <ion-row>
+            <ion-col size="3">
+              <ion-img src="/assets/img/perfil.jpg"></ion-img>
+            </ion-col>
+            <ion-col size="9">
+              <ion-list-header>{{nombreUsuario}}</ion-list-header>
+              <ion-note>{{correo}}</ion-note>
+            </ion-col>
+          </ion-row>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" detail="false" routerLinkActive="selected">
               <!-- <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon> -->
               <ion-icon slot="start" src="{{p.icon}}"></ion-icon>
               <ion-label color="medium">{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" (click)="closeSession()" detail="false" routerLinkActive="selected">
+              <!-- <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon> -->
+              <ion-icon slot="start" src="/assets/img/sidemenu/cerrarsesion.svg"></ion-icon>
+              <ion-label color="medium">Cerrar Sesión</ion-label>
             </ion-item>
           </ion-menu-toggle>
           

@@ -12,7 +12,7 @@ ion-menu.md ion-content {
 ion-menu.md ion-list {
   padding: 20px 0;
 }
-
+st
 ion-menu.md ion-note {
   margin-bottom: 30px;
 }
@@ -27,10 +27,10 @@ ion-menu.md ion-list#inbox-list {
 }
 
 ion-menu.md ion-list#inbox-list ion-list-header {
-  font-size: 22px;
+  font-size: small;
   font-weight: 600;
-
   min-height: 20px;
+  
 }
 
 ion-menu.md ion-list#labels-list ion-list-header {
@@ -123,5 +123,21 @@ ion-item.selected {
   text-align: right;
   ion-note{
     font-size: 12px;
+  }
+}
+
+#inbox-list ion-row {
+  ion-col{
+    ion-img{
+      width: 60px;
+      height: 60px;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    ion-note{
+      font-size: x-small;
+    }
   }
 }

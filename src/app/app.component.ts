@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -6,10 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   appPages : any;
-  
+  nombreUsuario:string;
+  correo:string;
  /*  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders']; */
-  constructor() {
+  constructor(private router:Router) {
     this.sidemenu();
+    let dataLocal = JSON.parse(localStorage.getItem('authorization'));
+    if(localStorage.getItem('authorization')!=null){
+      this.nombreUsuario = dataLocal.data.nombre;
+      this.correo = dataLocal.data.dataPersona.correoelectronico;
+    }
   }
  
   sidemenu(){
@@ -49,12 +56,21 @@ export class AppComponent {
         title : "Beneficios",
         url   : "/beneficios",
         icon  : "heart"
-      }, */
-      {
+      },  {
         title : "Cerrar Sesion",
         url   : "/login",
         icon  : "/assets/img/sidemenu/cerrarsesion.svg"
-      },
+      }, */
     ];
   }
+  closeSession(){
+    localStorage.clear();
+    /* this.autho.getKey().subscribe( (data:any) =>{
+      localStorage.setItem('authorization', data.authorization );
+      localStorage.setItem('role', data.role);
+    })  */
+    this.router.navigate(['/login']);
+    //this.menu.close('start');
+    console.log('cerrar sesión');
+}
 }

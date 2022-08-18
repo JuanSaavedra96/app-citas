@@ -39,19 +39,22 @@ ion-menu-button {
   }
   //transform: translateY(-50%);
 }
-
-/* #container strong {
-  font-size: 20px;
-  line-height: 26px;
+.containerDatos{
+  .nombreUsuario{
+    margin-left: 5%;
+    ion-note{
+      font-size: x-large;
+    }
+    ion-label{
+      font-size: small;
+    }
+  }
+  ion-img{
+    width: 60px;
+    height: 60px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
 }
-
-#container a {
-  text-decoration: none;
-} */

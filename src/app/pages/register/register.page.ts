@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder, FormsModule } from '@angular/forms';
-import { AlertController, LoadingController } from '@ionic/angular';
+import { AlertController, LoadingController, MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 
@@ -47,7 +47,11 @@ public _gender;
                 public alertCtrl: AlertController,
                 public fb: FormBuilder,
                 public loadingCtrl:LoadingController,
-                public router: Router) {}
+                public router: Router,
+                private menu : MenuController) {
+                  this.menu.enable(false);
+                  //this.menu.close('start');
+                }
 
   ngOnInit() {
    

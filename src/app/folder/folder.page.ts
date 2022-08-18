@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class FolderPage implements OnInit {
   public folder: string;
   nombreUsuario:string;
+  correo:string;
 
   constructor(private activatedRoute: ActivatedRoute,
     public router: Router) { }
@@ -17,6 +18,7 @@ export class FolderPage implements OnInit {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
     let dataLocal = JSON.parse(localStorage.getItem('authorization'));
     this.nombreUsuario = dataLocal.data.nombre;
+    this.correo = dataLocal.data.dataPersona.correoelectronico;
     console.log(this.nombreUsuario)
   }
   reservarCita(){

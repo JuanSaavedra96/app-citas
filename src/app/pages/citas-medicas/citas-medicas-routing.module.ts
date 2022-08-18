@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginGuard } from 'src/app/guard/login.guard';
 import { CitasMedicasComponent } from './citas-medicas.component';
 import { DetailCitasComponent } from './detail-citas/detail-citas.component';
 
@@ -9,12 +10,12 @@ const routes: Routes = [
   {
     path: '',
     component: CitasMedicasComponent,
-    //canActivate:[AccesGuard]
+    canActivate:[LoginGuard]
   },
   {
     path: ':id',
     component: DetailCitasComponent,
-    //canActivate:[AccesGuard]
+    canActivate:[LoginGuard]
   }
 ];
 
