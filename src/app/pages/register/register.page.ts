@@ -50,7 +50,6 @@ public _gender;
                 public router: Router,
                 private menu : MenuController) {
                   this.menu.enable(false);
-                  //this.menu.close('start');
                 }
 
   ngOnInit() {

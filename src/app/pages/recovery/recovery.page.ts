@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AlertController, LoadingController, MenuController } from '@ionic/angular';
 import { Router, ActivatedRoute } from '@angular/router';
+import { userService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -15,18 +16,19 @@ export class RecoveryPage implements OnInit {
   public formCode: FormGroup;
   public code;
   public logeo;
-  public recoveryData;
-  public dataSend;
   public primero;
   public segundo;
   public tercero;
   public cuarto;
+  public dataSend;
   constructor(public router: Router,
               public form:        FormBuilder,
               public alertCtrl: AlertController,
               public loadingCtrl : LoadingController,
               public routes: ActivatedRoute,
-              private menu: MenuController) {      
+              private menu: MenuController,
+              private userService : userService
+              ) {      
                 this.formCode = this.form.group({
                   primero : [],
                   segundo : [],
@@ -40,6 +42,8 @@ export class RecoveryPage implements OnInit {
                }
 
   ngOnInit() {
+    this.dataSend = this.userService.dataSend;
+    console.log(this.dataSend.usuario)
   }
 
   /* 
@@ -56,15 +60,27 @@ export class RecoveryPage implements OnInit {
   /* 
   FUNCIÓN PARA SALVAR LOS DATOS DE RECUPERACIÓN SE COMBINAN CON LOS DATOS OBTENIDOS EN LA SOLICITUD */
   saveData(form){
-    /* console.log(form)
+    const code = `${this.primero}${this.segundo}${this.tercero}${this.cuarto}`;
     let datos = {
-      code:`${this.primero}${this.segundo}${this.tercero}${this.cuarto}`,
-      documentType: this.dataSend.documentType,
-      dni:this.dataSend.documentNumber,
-      id:this.recoveryData.id,
-      password:this.formCode.value.password
-    } */
-    this.goToLogin();
+      usuario:this.dataSend.usuario,
+      clave:this.formCode.value.password,
+      codigo: code.toUpperCase()
+    }
+    console.log(datos)
+    this.userService.loginRecovery(datos).subscribe(data => {
+      console.log(data)
+      this.logeo = data;
+      if(data){
+            console.log('this.logeo:', this.logeo);
+            this.recoverySuccess();
+            this.router.navigate(['login']);
+      } 
+    },err =>{
+      console.log('el logeo:', this.logeo, err);
+      this.logeo = err;
+        this.erroCode();
+    });
+    //this.goToLogin();
 }
 
 async recoverySuccess(){

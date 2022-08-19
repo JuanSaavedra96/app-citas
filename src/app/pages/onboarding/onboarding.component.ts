@@ -11,9 +11,9 @@ import { MenuController } from '@ionic/angular';
 export class OnboardingComponent implements OnInit {
   public authPublic
   constructor(public router: Router,
-    private menu : MenuController) {
-    this.menu.enable(false);
-  }
+    private menu:MenuController) {
+      this.menu.enable(false);
+     }
   ngOnInit() {}
 
   goToLogin(){

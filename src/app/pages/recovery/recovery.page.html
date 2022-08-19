@@ -23,16 +23,11 @@
    <div size="12">
      <ion-row class="padding">
          <ion-col class="rectanguloInput">
-           <ion-input type="tel"
-                        minlength="1"
-                        maxlength="1"
-                        name="primero"
-                       [(ngModel)]="primero"
-                       formControlName="primero"
-                        ></ion-input>
+           <ion-input type="text" class="uppercase" minlength="1" maxlength="1" name="primero" [(ngModel)]="primero" formControlName="primero"
+                    ></ion-input>
           </ion-col>
          <ion-col class="rectanguloInput">
-            <ion-input type="tel"
+            <ion-input name="segundo" id="segundo" type="text" class="uppercase"
                       minlength="1"
                       maxlength="1"
                         [(ngModel)]="segundo"
@@ -40,7 +35,7 @@
                         ></ion-input>
           </ion-col>
          <ion-col class="rectanguloInput">
-           <ion-input type="tel"
+           <ion-input type="tel" class="uppercase"
                       minlength="1"
                       maxlength="1"
                       tercero="tercero"
@@ -48,7 +43,7 @@
                       [(ngModel)]="tercero"></ion-input>
           </ion-col>
           <ion-col class="rectanguloInput">
-              <ion-input type="tel"
+              <ion-input type="tel" class="uppercase"
                       minlength="1"
                       maxlength="1"
                          tercero="cuarto"
@@ -89,7 +84,7 @@
                       block
                        type="submit"
                        class="botonRecuperar"
-                       >
+                       [disabled]="!formCode.valid || !validacion()">
                  Recuperar
               </ion-button>
             </div>

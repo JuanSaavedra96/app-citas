@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-folder',
@@ -12,7 +13,10 @@ export class FolderPage implements OnInit {
   correo:string;
 
   constructor(private activatedRoute: ActivatedRoute,
-    public router: Router) { }
+    public router: Router,
+    private menu:MenuController) {
+      this.menu.enable(true);
+     }
 
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');

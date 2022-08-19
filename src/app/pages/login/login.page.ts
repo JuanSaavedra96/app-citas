@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController, AlertController, LoadingController } from '@ionic/angular';
+import { ModalController, AlertController, LoadingController, MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { EndpointService } from 'src/app/services/endpoint.service';
+import { userService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -30,10 +30,10 @@ export class LoginPage implements OnInit {
     public modalCtrl: ModalController,
     public loading: LoadingController,
     public router: Router,
-    public newsSrv:EndpointService) { 
-     
-        
-    }
+    public newsSrv:userService,
+    private menu:MenuController) {
+      this.menu.enable(false);
+     }
 
   ngOnInit() {
 
@@ -54,14 +54,13 @@ export class LoginPage implements OnInit {
       this.documentId = null;*/
       localStorage.setItem('authorization', JSON.stringify(data));
       localStorage.setItem('nombre', data.data.nombre);
-      /* console.log(localStorage.setItem('nombre', data.data.nombre)) */
       this.msg = "";
       this.dni = "";
       this.password = "";  
       this.router.navigate(['home']);
     }, async err =>{
       console.log(err);
-      this.msg = err.error.message;
+      this.msg = err.error.error;
       const alert = await this.alertCtrl.create({
         header: 'Error de Login',
         message: `${this.msg}`,
@@ -89,12 +88,12 @@ export class LoginPage implements OnInit {
     const alert = await this.alertCtrl.create({
       subHeader:"RECUPERAR CONTRASEÑA",
       cssClass:'headerRecovery',
-      message:'Ingresa tu correo electronico y te enviaremos un código para recuperar tu cuenta',
+      message:'Ingresa tu DNI y te enviaremos un código a tu para recuperar tu cuenta',
       inputs :[
         {
-          name:'Email',
-          placeholder:'Ingresa tu correo electrónico',
-          type: 'text'
+          name:'usuario',
+          placeholder:'Ingresa tu DNI',
+          type: 'tel'
         }
       ],
       buttons :[
@@ -102,7 +101,7 @@ export class LoginPage implements OnInit {
             text:'Enviar',
             handler: data => {
               console.log('enviando correo electronico');
-              let document = data.documento;
+              let document = data;
               console.log('lo que se almacena en correo:', data);
              /*  const dataSend = {
                 documentNumber:  data.documento,
@@ -112,16 +111,41 @@ export class LoginPage implements OnInit {
                 },
                 //app: 'ebooking'
               } */
-              //SERVICIO DE ENVIO Y SI SE CONFIRMA TE REDIRECCIONA 
-              this.router.navigate(['recovery']);
-              console.log("disque enviando correo")
+              this.newsSrv.recoveryLogin(document).subscribe(data =>{
+                this.datos = data;
+                console.log('this.datos:', this.datos);
+                console.log('this.datos:',data);
+                this.newsSrv.dataSend = document; //ALMACENA EL DNI DEL USUARIO
+                this.router.navigate(['recovery']);
+            }, async err =>{
+              console.log(err.status);
+              if(err.status==400){
+                const alert = await this.alertCtrl.create({
+                  header: 'Atención',
+                  //subHeader: '',
+                  message: '¡DNI no encontrado!',
+                  buttons: ['OK'],
+                });
+            
+                await alert.present();
+              }
+            })
             }
           }
       ]
     });
    await alert.present(); 
   }
+  async dniError() {
+    const alert = await this.alertCtrl.create({
+      header: 'Atención',
+      //subHeader: '',
+      message: '¡DNI no encontrado!',
+      buttons: ['OK'],
+    });
 
+    await alert.present();
+  }
   mostrarContrasena(){
     var tipo = document.getElementById("password") as HTMLInputElement | null;;
     if(tipo.type == "password"){
